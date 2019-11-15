@@ -7,12 +7,14 @@
     "en": "EasyHome"
   },
   "description": {
-    "en": "Adds support for MyBrand devices."
+    "en": "Adds support for ZigBee devices."
   },
   "category": [
     "lights"
   ],
-  "permissions": [],
+  "permissions": [
+    "homey:wireless:zigbee"
+  ],
   "images": {
     "large": "/assets/images/large.png",
     "small": "/assets/images/small.png"
@@ -20,5 +22,282 @@
   "author": {
     "name": "Easy Home",
     "email": "sunricher_src@163.com"
-  }
+  },
+  "flow": {
+    "triggers": [
+      {
+        "id": "wall_controller_button",
+        "title": {
+          "en": "A button has been pressed",
+          "nl": "Een knop is ingedrukt"
+        },
+        "hint": {
+          "en": "This card will trigger on any button pressed and provides the scene tokens.",
+          "nl": "Deze kaart wordt geactiveerd bij iedere knop die ingedrukt wordt en biedt de scene tokens aan."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ZGRC_KEY_004|ZG2838K4_EU06"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "button",
+            "type": "string",
+            "title": {
+              "en": "button",
+              "nl": "knop"
+            },
+            "example": {
+              "en": "0"
+            }
+          },
+          {
+            "name": "scene",
+            "type": "string",
+            "title": {
+              "en": "scene",
+              "nl": "scene"
+            },
+            "example": {
+              "en": "Button pressed (test)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "wall_controller_scene",
+        "title": {
+          "en": "A scene has been activated",
+          "nl": "Een scene is geactiveerd"
+        },
+        "hint": {
+          "en": "This card will only get triggered if the scene matches the state of the dropdown fields.",
+          "nl": "Deze kaart wordt alleen geactiveerd wanneer de scene overeenkomt met de toestand van de gekozen opties."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ZGRC_KEY_004|ZG2838K4_EU06"
+          },
+          {
+            "name": "button",
+            "type": "autocomplete"
+          },
+          {
+            "name": "scene",
+            "type": "autocomplete"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "title": {
+          "en": "Set forced brightness",
+          "nl": "Stel geforceerde helderheid in"
+        },
+        "hint": {
+          "en": "Change the \"set forced brightness\" parameter of your dimmer. If this parameter is active, switching on the Dimmer 2 (S1 single click) will always set this brightness level, 0 will disable this function.",
+          "nl": "Stel de \"geforceerde helderheid\" parameter van een dimmer in. Wanneer deze parameter actief is, zal bij het inschakelen van Dimmer 2 (S1 single click) altijd naar deze helderheid inschakelen, 0 schakelt deze functie uit."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZB_Dimmer_3wire"
+          },
+          {
+            "type": "dropdown",
+            "name": "enable_set_forced_brightness",
+            "values": [
+              {
+                "id": "enabled",
+                "label": {
+                  "en": "Enabled",
+                  "nl": "Ingeschakeld"
+                }
+              },
+              {
+                "id": "disabled",
+                "label": {
+                  "en": "Disabled",
+                  "nl": "Uitgeschakeld"
+                }
+              }
+            ]
+          },
+          {
+            "name": "set_forced_brightness_level",
+            "type": "range",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "label": "%",
+            "labelMultiplier": 100
+          }
+        ],
+        "id": "ZB_dim_set_forced_brightness"
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "id": "ZG9101SAC_HP_Switch",
+      "name": {
+        "en": "Switch (ZigBee)"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "icon": "/drivers/ZG9101SAC_HP_Switch/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ZG9101SAC_HP_Switch/assets/images/large.png",
+        "small": "/drivers/ZG9101SAC_HP_Switch/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Sunricher",
+          "NAMRON AS",
+          "NAMRON  AS",
+          "NAMRON As"
+        ],
+        "productId": [
+          "ON/OFF",
+          "4512704"
+        ],
+        "deviceId": 256,
+        "profileId": 260,
+        "learnmode": {
+          "image": "/drivers/ZG9101SAC_HP_Switch/assets/icon.svg",
+          "instruction": {
+            "en": "Press the reset button 5 times (within 1.5 seconds) on the device, it will reset the device and active the pair mode.\nThe connected light will stay solid on for 3 seconds to indicate successful pairing."
+          }
+        }
+      }
+    },
+    {
+      "id": "ZG9101SAC_HP",
+      "name": {
+        "en": "Dimmer (ZigBee)"
+      },
+      "class": "light",
+      "capabilities": [
+        "dim",
+        "onoff"
+      ],
+      "icon": "/drivers/ZG9101SAC_HP/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ZG9101SAC_HP/assets/images/large.png",
+        "small": "/drivers/ZG9101SAC_HP/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Sunricher",
+          "NAMRON AS",
+          "NAMRON  AS",
+          "NAMRON As"
+        ],
+        "productId": [
+          "ZG9101SAC-HP",
+          "4512700"
+        ],
+        "deviceId": 257,
+        "profileId": 260,
+        "learnmode": {
+          "image": "/drivers/ZG9101SAC_HP/assets/icon.svg",
+          "instruction": {
+            "en": "Press the reset button 5 times (within 1.5 seconds) on the device, it will reset the device and active the pair mode.\nThe connected light will stay solid on for 3 seconds to indicate successful pairing."
+          }
+        }
+      }
+    },
+    {
+      "id": "ZGRC_KEY_004",
+      "name": {
+        "en": "WallController (ZigBee)"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
+      "icon": "/drivers/ZGRC_KEY_004/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ZGRC_KEY_004/assets/images/large.png",
+        "small": "/drivers/ZGRC_KEY_004/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Sunricher",
+          "NAMRON AS",
+          "NAMRON  AS",
+          "NAMRON As"
+        ],
+        "productId": [
+          "ZGRC_KEY_004",
+          "4512701",
+          "4512719"
+        ],
+        "deviceId": 1,
+        "profileId": 260,
+        "learnmode": {
+          "image": "/drivers/ZGRC_KEY_004/assets/icon.svg",
+          "instruction": {
+            "en": "Press and hold down both buttons over 3 seconds.\nThe Green LED indicator will turn on.\nRelease both button and immediately press the ON/OFF button and the remote will be set to pair mode.\nThe green LED indicator blinking 6 times will indicate successful inclusion.\n\nReset...\nWhen you can't successfully add a device, reset the device first.\nPress and hold down both buttons over 3 seconds.\nThe green LED indicator will turn on and the remote will be set to pair mode.\nRelease both button and immediately press the ON/OFF button 5 times and the remote will be reset."
+          }
+        }
+      }
+    },
+    {
+      "id": "ZG2833K4_EU06",
+      "name": {
+        "en": "WallController (ZigBee)"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
+      "icon": "/drivers/ZG2833K4_EU06/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ZG2833K4_EU06/assets/images/large.png",
+        "small": "/drivers/ZG2833K4_EU06/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Sunricher",
+          "NAMRON AS",
+          "NAMRON  AS",
+          "NAMRON As"
+        ],
+        "productId": [
+          "ZG2833K4_EU06",
+          "4512719"
+        ],
+        "deviceId": 1,
+        "profileId": 260,
+        "learnmode": {
+          "image": "/drivers/ZG2833K4_EU06/assets/icon.svg",
+          "instruction": {
+            "en": "Press and hold down both Reset and Pair buttons over 3 seconds.\nThe Green LED indicator will turn on.\nRelease both button and immediately press the Pari button on the top right corner and the remote will be set to pair mode.\nThe green LED indicator blinking 6 times will indicate successful inclusion.\n\nReset...\nWhen you can't successfully add a device, reset the device first.\nPress and hold down both Reset and Pari buttons over 3 seconds.\nThe green LED indicator will turn on and the remote will be set to pair mode.\nRelease both button and immediately press the Reset button 5 times and the remote will be reset."
+          }
+        }
+      }
+    }
+  ]
 }
