@@ -1,0 +1,8 @@
+{
+  "1.0.0": {
+    "en": "first publish"
+  },
+  "1.0.1": {
+    "en": "Add more ZigBee Lights support"
+  }
+}

@@ -9,7 +9,7 @@
 
 // # Jason
 
-// ManufacturerName: "NAMRON AS", "NAMRON As"
+// ManufacturerName: "NAMRON AS", "NAMRON  AS", "NAMRON As"
 // ProductID: "4512700"
 
 const ZigBeeLightDevice = require('homey-meshdriver').ZigBeeLightDevice;
