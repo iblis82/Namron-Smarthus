@@ -1,6 +1,6 @@
 {
   "id": "com.sunricher.easyhome",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "brandColor": "#06A1FF",
@@ -27,6 +27,10 @@
     "name": "Easy Home",
     "email": "sunricher_src@163.com"
   },
+  "bugs": {
+    "url": "https://github.com/easyhomesrc/Homey_EasyHome/issues"
+  },
+  "source": "https://github.com/easyhomesrc/Homey_EasyHome",
   "flow": {
     "triggers": [
       {
