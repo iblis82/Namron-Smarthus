@@ -1,65 +1,96 @@
-EasyHome
+# EasyHome
 
-This App adds support for ZigBee Devices to Homey.
+This App adds support for ZigBee & Z-Wave Devices to Homey.
 
 You must install this App before adding the devices.
 
-[ What works ]
+## Supported Lauguages 
 
-Connecting ZigBee devices.
+* English 
 
-Control ZigBee lights.
+## Issues 
 
-[ List of supported ]
+### Adding device failed? 
 
-[ Light (ZigBee) ]
+* Make sure this App is installed.
 
-RGBW-CCT, RGBW Lighting, RGB-CCT (ZLL)
+* Make sure the device is in pair mode.
 
-CCT Lighting (ZLL)
+* Restart this App. (Homey -> More -> Apps -> This App -> Settings (Top right corner) -> Restart App).
 
-DIM Lighting (ZHA)
+* Restart the Homey device and Homey App.
 
-ZG9101SAC_HP_Switch (ZHA)
+* Reset ZigBee or Z-Wave (Homey -> More -> Settings -> ZigBee or Z-Wave -> Reset network).
 
-ZG9101SAC_HP (ZHA)
+### Identified as an unknown device? 
 
-[ Remote Control, Wall Controllers (ZigBee) ]
+* Provide the basic information of the device to us.
 
-ZGRC-KEY-001 (ZHA)
+* Steps to get the information. 
 
-ZGRC-KEY-004 (ZHA)
+1. Homey App -> Devices.
+2. Long press the unknown device.
+3. Settings -> Advance settings.
+4. Provide "Manufacturer ID, Product ID, Device ID, Profile ID" to us. 
 
-ZGRC-KEY-037 (ZHA)
+### Remote Contorl or Wall Controller no response after binding?
 
-ZG2833K4_EU06 (ZHA)
+* Re-power the Remote Control or Wall Controller. 
 
-[ Issues ]
+* Restart the Homey Gateway.
 
-[ Adding device failed? ]
+## Supported Devices
 
-Make sure this App is installed.
+### ZigBee Devices 
 
-Make sure the device is in pair mode.
+* RGBW-CCT, RGBW Lighting, RGB-CCT (Light, ON/OFF, Dim, [CCT], RGB, [White])
 
-Restart this App. (Homey -> More -> Apps -> This App -> Settings (Top right corner) -> Restart App).
+* CCT Lighting (Light, ON/OFF, Dim, CCT)
 
-Restart the Homey device and Homey App.
+* DIM Lighting (Light, ON/OFF, Dim)
 
-Reset ZigBee (Homey -> More -> Settings -> ZigBee -> Reset network).
+* ZG9101SAC_HP_Switch (Light, ON/OFF)
 
-[ Identified as an unknown device? ]
+* ZG9101SAC_HP (Light, ON/OFF, Dim)
 
-Provide the basic information of the device to us.
+* ZGRC-KEY-001 (Wall Controller, ON/OFF, Dim Up/Down)
 
-Steps to get the information. 
+* ZGRC-KEY-004 (Wall Controller, ON/OFF)
 
-1 Homey App -> Devices.
-2 Long Press the unknown device.
-3 Settings -> Advance settings.
-4 Provide "Manufacturer ID, Product ID, Device ID, Profile ID" to us. 
+* ZGRC-KEY-037 (Remote Control, All ON/OFF, 4 ON/OFF Groups, S1, S2)
 
-[ Contact Us ]
+* ZG2833K4_EU06 (Wall Controller, 2 ON/OFF Groups)
 
-Email
+### Z-Wave Devices 
+
+* ZV9101SAC-HP-Switch (Light, ON/OFF)
+
+* ZV9101SAC-HP (Light, ON/OFF, Dim)
+
+* ZV9001K2-DIM (Wall Controller, All ON/OFF)
+
+* ZV9001NK12-DIM-Z4 (Remote Control, All ON/OFF, 4 ON/OFF Groups, S1, S2)
+
+* ZV9001K4-DIM-G2 (Wall Controller, 2 ON/OFF Groups)
+
+* ZV9001K8-DIM-G4 (Wall Controller, 4 ON/OFF Groups)
+
+* ZV9020A (Outlet, ON/OFF)
+
+## Contact Us
+
+### Email
+
 maginawin@163.com
+
+## Change Log
+
+### v1.0.3
+
+* Add support for ZV9001NK12-DIM-Z4 (Remote Control, All ON/OFF, 4 ON/OFF Groups, S1, S2)-DIM-Z4.
+
+* Add support for ZV9001K4-ZV9001K4-DIM-G2 (Wall Controller, 2 ON/OFF Groups)-G2.
+
+* Add support for ZV9001K8-DIM-G4 (Wall Controller, 4 ON/OFF Groups)-DIM-G4.
+
+* Add support for ZV9020A (Outlet, ON/OFF).

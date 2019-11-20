@@ -4,7 +4,7 @@ const Homey = require('homey');
 
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
-module.exports = class ZW_WallController extends ZwaveDevice {
+module.exports = class ZW_RemoveControl extends ZwaveDevice {
 
 	async onMeshInit() {
 
