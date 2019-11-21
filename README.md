@@ -41,41 +41,30 @@ You must install this App before adding the devices.
 
 ## Supported Devices
 
-### ZigBee Devices 
+### ZigBee Devices (11)
 
 * RGBW-CCT, RGBW Lighting, RGB-CCT (Light, ON/OFF, Dim, [CCT], RGB, [White])
-
 * CCT Lighting (Light, ON/OFF, Dim, CCT)
-
 * DIM Lighting (Light, ON/OFF, Dim)
-
 * ZG9101SAC_HP_Switch (Light, ON/OFF)
-
 * ZG9101SAC_HP (Light, ON/OFF, Dim)
-
 * ZGRC-KEY-001 (Wall Controller, ON/OFF, Dim Up/Down)
-
 * ZGRC-KEY-004 (Wall Controller, ON/OFF)
-
 * ZGRC-KEY-037 (Remote Control, All ON/OFF, 4 ON/OFF Groups, S1, S2)
-
 * ZG2833K4_EU06 (Wall Controller, 2 ON/OFF Groups)
+* ZG2833K8_EU05 (Wall Controller, 4 ON/OFF Groups)
+* ZG2868A (Remote Contorl)
 
-### Z-Wave Devices 
+### Z-Wave Devices (8)
 
 * ZV9101SAC-HP-Switch (Light, ON/OFF)
-
 * ZV9101SAC-HP (Light, ON/OFF, Dim)
-
 * ZV9001K2-DIM (Wall Controller, All ON/OFF)
-
 * ZV9001NK12-DIM-Z4 (Remote Control, All ON/OFF, 4 ON/OFF Groups, S1, S2)
-
 * ZV9001K4-DIM-G2 (Wall Controller, 2 ON/OFF Groups)
-
 * ZV9001K8-DIM-G4 (Wall Controller, 4 ON/OFF Groups)
-
 * ZV9020A (Outlet, ON/OFF)
+* ZV9010A (Door/Window Sensor)
 
 ## Contact Us
 
@@ -87,10 +76,29 @@ maginawin@163.com
 
 ### v1.0.3
 
-* Add support for ZV9001NK12-DIM-Z4 (Remote Control, All ON/OFF, 4 ON/OFF Groups, S1, S2)-DIM-Z4.
+#### Added 
 
-* Add support for ZV9001K4-ZV9001K4-DIM-G2 (Wall Controller, 2 ON/OFF Groups)-G2.
+* ZG2833K8_EU05 (Wall Controller, 4 ON/OFF Groups)
+* ZG2868A (Remote Contorl)
+* ZV9001NK12-DIM-Z4 (Remote Control, All ON/OFF, 4 ON/OFF Groups, S1, S2)-DIM-Z4.
+* ZV9001K4-ZV9001K4-DIM-G2 (Wall Controller, 2 ON/OFF Groups)-G2.
+* ZV9001K8-DIM-G4 (Wall Controller, 4 ON/OFF Groups)-DIM-G4.
+* ZV9020A (Outlet, ON/OFF).
+* ZV9010A (Door/Window Sensor)
 
-* Add support for ZV9001K8-DIM-G4 (Wall Controller, 4 ON/OFF Groups)-DIM-G4.
+### v1.0.2
 
-* Add support for ZV9020A (Outlet, ON/OFF).
+#### Added 
+
+* RGBW-CCT, RGBW Lighting, RGB-CCT (Light, ON/OFF, Dim, [CCT], RGB, [White])
+* CCT Lighting (Light, ON/OFF, Dim, CCT)
+* DIM Lighting (Light, ON/OFF, Dim)
+* ZG9101SAC_HP_Switch (Light, ON/OFF)
+* ZG9101SAC_HP (Light, ON/OFF, Dim)
+* ZGRC-KEY-001 (Wall Controller, ON/OFF, Dim Up/Down)
+* ZGRC-KEY-004 (Wall Controller, ON/OFF)
+* ZGRC-KEY-037 (Remote Control, All ON/OFF, 4 ON/OFF Groups, S1, S2)
+* ZG2833K4_EU06 (Wall Controller, 2 ON/OFF Groups)
+* ZV9101SAC-HP-Switch (Light, ON/OFF)
+* ZV9101SAC-HP (Light, ON/OFF, Dim)
+* ZV9001K2-DIM (Wall Controller, All ON/OFF)
