@@ -479,7 +479,7 @@
     {
       "id": "ZG_RGBW_CCT",
       "name": {
-        "en": "Light RGBWCCT (ZigBee)"
+        "en": "Light Color (ZigBee)"
       },
       "class": "light",
       "capabilities": [
@@ -497,13 +497,17 @@
       "zigbee": {
         "manufacturerName": [
           "Sunricher",
+          "NAMRON AS",
+          "NAMRON  AS",
+          "NAMRON As",
           "Osram"
         ],
         "productId": [
           "RGBW-CCT",
           "RGBW Lighting",
           "RGB-CCT",
-          "Flex RGBW"
+          "Flex RGBW",
+          "4512707"
         ],
         "deviceId": 528,
         "profileId": 49246,
@@ -533,10 +537,14 @@
       },
       "zigbee": {
         "manufacturerName": [
-          "Sunricher"
+          "Sunricher",
+          "NAMRON AS",
+          "NAMRON  AS",
+          "NAMRON As"
         ],
         "productId": [
-          "CCT Lighting"
+          "CCT Lighting",
+          "4512707"
         ],
         "deviceId": 544,
         "profileId": 49246,
@@ -565,10 +573,15 @@
       },
       "zigbee": {
         "manufacturerName": [
-          "Sunricher"
+          "Sunricher",
+          "NAMRON AS",
+          "NAMRON  AS",
+          "NAMRON As"
         ],
         "productId": [
-          "DIM Lighting"
+          "DIM Lighting",
+          "4512708",
+          "4512707"          
         ],
         "deviceId": 257,
         "profileId": 260,
