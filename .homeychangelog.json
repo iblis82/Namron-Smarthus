@@ -13,5 +13,8 @@
   },
   "1.0.4": {
     "en": "Remove markdown formatting in README, remove changelog in README, remote URLs in README."
+  },
+  "1.0.5": {
+    "en": "Added support for ZV9101CS, ZV9001K4-DIM."
   }
 }
