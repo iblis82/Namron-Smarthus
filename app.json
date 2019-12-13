@@ -1,6 +1,6 @@
 {
   "id": "com.easyhome.mw.zigbee",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "brandColor": "#06A1FF",
@@ -797,6 +797,47 @@
       }
     },
     {
+      "id": "ZV9001K4_DIM",
+      "name": {
+        "en": "WallController (Z-Wave)"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
+      "icon": "/drivers/ZV9001K4_DIM/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ZV9001K4_DIM/assets/images/large.png",
+        "small": "/drivers/ZV9001K4_DIM/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": [
+          816, 1080
+        ],
+        "productTypeId": [
+          768
+        ],
+        "productId": [
+          41744
+        ],
+        "learnmode": {
+          "image": "/drivers/ZV9001K4_DIM/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press and hold down both ON and OFF buttons until the LED indicator turns on, the device will be set to pair mode. Reset the device and restart Homey Hub if it cannot be successfully added.\n\nReset...\nReset the device with the Homey App. Go to Homey App -> More -> Settings -> Z-Wave -> Remove a Z-Wave device, then press and hold down both ON and OFF buttons until the LED indicator turns on."
+          }
+        },
+        "associationGroups": [
+          1
+        ]
+      }
+    },
+    {
       "id": "ZV9001K8_DIM_G4",
       "name": {
         "en": "WallController (Z-Wave)"
@@ -918,6 +959,46 @@
           "associationGroups": [
             1, 2 
           ]
+        }
+      }
+    },
+    {
+      "id": "ZV9101CS",
+      "name": {
+        "en": "Dimmer (Z-Wave)"
+      },
+      "class": "light",
+      "capabilities": ["onoff", "dim"],
+      "icon": "/drivers/ZV9101CS/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ZV9101CS/assets/images/large.png",
+        "small": "/drivers/ZV9101CS/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": [
+          816, 1080
+        ],
+        "productTypeId": [
+          512
+        ],
+        "productId": [
+          53250
+        ],
+        "learnmode": {
+          "image": "/drivers/ZV9101CS/assets/learnmode.svg",
+          "instruction": {
+            "en": "Triple press the reset (Rrog.) button on the device, it will set the device into pair mode. Reset the device and restart Homey Hub if it cannot be successfully added.\n\nReset...\nReset the device with the Homey App. Go to Homey App -> More -> Settings -> Z-Wave -> Remove a Z-Wave device, then triple press the reset button on the device."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Lifeline association group (do not change)"
+            }
+          }
         }
       }
     }

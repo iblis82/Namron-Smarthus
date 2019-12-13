@@ -67,3 +67,5 @@ Supported Devices
     ZV9001K8-DIM-G4 (Wall Controller, 4 ON/OFF Groups)
     ZV9020A (Outlet, ON/OFF)
     ZV9010A (Door/Window Sensor)
+    ZV9101CS (Light, ON/OFF, Dim)
+    ZV9001K4-DIM (Wall Controller, ON/OFF, Dim Up/Down)
