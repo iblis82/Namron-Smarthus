@@ -49,11 +49,12 @@ CCT Lighting (Light, ON/OFF, Dim, CCT)
 DIM Lighting (Light, ON/OFF, Dim)
 ZG9101SAC_HP_Switch (Light, ON/OFF)
 ZG9101SAC_HP (Light, ON/OFF, Dim)
+
 ZGRC-KEY-001 (Wall Controller, ON/OFF, Dim Up/Down)
 ZGRC-KEY-004 (Wall Controller, ON/OFF)
-ZGRC-KEY-037 (Remote Control, All ON/OFF, 4 ON/OFF Groups, S1, S2)
 ZG2833K4_EU06 (Wall Controller, 2 ON/OFF Groups)
 ZG2833K8_EU05 (Wall Controller, 4 ON/OFF Groups)
+ZGRC-KEY-037 (Remote Control, All ON/OFF, 4 ON/OFF Groups, S1, S2)
 ZG2868A (Remote Contorl)
 
 
@@ -61,11 +62,13 @@ Z-Wave Devices
 
 ZV9101SAC-HP-Switch (Light, ON/OFF)
 ZV9101SAC-HP (Light, ON/OFF, Dim)
+ZV9101CS (Light, ON/OFF, Dim)
+
 ZV9001K2-DIM (Wall Controller, All ON/OFF)
-ZV9001NK12-DIM-Z4 (Remote Control, All ON/OFF, 4 ON/OFF Groups, S1, S2)
 ZV9001K4-DIM-G2 (Wall Controller, 2 ON/OFF Groups)
 ZV9001K8-DIM-G4 (Wall Controller, 4 ON/OFF Groups)
+ZV9001K4-DIM (Wall Controller, ON/OFF, Dim Up/Down)
+ZV9001NK12-DIM-Z4 (Remote Control, All ON/OFF, 4 ON/OFF Groups, S1, S2)
+
 ZV9020A (Outlet, ON/OFF)
 ZV9010A (Door/Window Sensor)
-ZV9101CS (Light, ON/OFF, Dim)
-ZV9001K4-DIM (Wall Controller, ON/OFF, Dim Up/Down)

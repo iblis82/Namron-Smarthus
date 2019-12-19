@@ -1,6 +1,6 @@
 {
   "id": "com.easyhome.mw.zigbee",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "brandColor": "#06A1FF",
@@ -48,7 +48,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=ZGRC_KEY_004|ZG2838K4_EU06|ZGRC_KEY_037|ZGRC_KEY_001|ZV9001K2_DIM"
+            "filter": "driver_id=ZGRC-KEY-001|ZGRC-KEY-004|ZG2833K4_EU06|ZG2833K8_EU05|ZGRC-KEY-037|ZG2868A|ZV9001K2-DIM|ZV9001K4-DIM-G2|ZV9001K8-DIM-G4|ZV9001K4-DIM|ZV9001NK12-DIM-Z4"
           }
         ],
         "tokens": [
@@ -90,7 +90,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=ZGRC_KEY_004|ZG2838K4_EU06|ZGRC_KEY_037|ZGRC_KEY_001|ZV9001K2_DIM"
+            "filter": "driver_id=ZGRC-KEY-001|ZGRC-KEY-004|ZG2833K4_EU06|ZG2833K8_EU05|ZGRC-KEY-037|ZG2868A|ZV9001K2-DIM|ZV9001K4-DIM-G2|ZV9001K8-DIM-G4|ZV9001K4-DIM|ZV9001NK12-DIM-Z4"
           },
           {
             "name": "button",
